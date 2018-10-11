@@ -2,6 +2,8 @@ crazy_scrapping
 
 Bonjour correctrice/ correcteur !
 
+mon statut sur slack : axelletrt
+
 Voici quelques indications pour te faciliter la tâche :) 
 
 1. Si cela n'est pas déjà un reflèxe quand tu récupères des liens github (projet), tu as juste à mettre "gitclone https://github.com/axelletrt/crazy_scrapping"  sur ton terminal et si tout se passe bien  tu récupères tout un dossier au nom de mon repository (crazy_scrapping) avec mes 3 fichiers ruby qui correspondent aux trois exercices du jeudi 11 octobre sur la méthode du scrapping
@@ -11,4 +13,5 @@ Voici quelques indications pour te faciliter la tâche :)
 Bonne journée à toi et bon courage ! 
 
 
-Ps : Tout les exercices sont faits et sont corrects avec notamment les bonus. Sauf le bonus de l'exercice 2 ! Idéalement il aurait fallut utiliser la gem "Whenever" (sur github) pour relancer ta méthode toutes les heures... Nobody is perfect :) 
+Ps : Tous les exercices sont faits et sont corrects avec notamment les bonus. Même le bonus de l'exercice 2 ! (Oui celui pour relancer la méthode toutes les heures) Bonne correction et à tout de suite au téléphone. 
+
