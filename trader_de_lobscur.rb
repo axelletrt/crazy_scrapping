@@ -1,10 +1,11 @@
 require 'open-uri'
 require 'nokogiri'
-require 'whenever'
+
+#Première méthode trouvée : donne comme résultat deux hashes dans un array. Tous les arrays se situent également dans un array global
+#Voir autre méthode2 en commentaire (ci-dessous) pour sortir les résultats comme demandé dans le bonus ; 
+#Avoir les urls dans un hash propre du genre { "name" => "nomDeLaVille", "email" => "ville@machin.chose" } 
 
 def trader (url)
-
-
         page = Nokogiri::HTML(open(url))
         list_currency = page.xpath('//*[@id]/td[2]/a')
         list_rates=  page.xpath('//*[@id]/td[8]')
@@ -25,7 +26,6 @@ def trader (url)
         }
 
     print tableau = [array1.zip(array2)]
-
 end 
 
 
@@ -42,3 +42,31 @@ end
 perform
 
 
+#Méthode2
+#Méthode 100% fidèle au bonus (Pour enlever tous les commentaires d'un coup : Tout selectionner et faire ctrl+/ )
+
+# require 'open-uri'
+# require 'nokogiri'
+
+# def trader (url)
+#     page = Nokogiri::HTML(open(url))
+
+#     list_line = page.xpath('//*[@id="currencies-all"]/tbody/tr')
+#     list_currencies = Array.new
+
+#     list_line.each { | line |
+#         coin = Hash.new
+
+#         currency = line.xpath('td[2]/a')
+#         rates = line.xpath('td[8]')
+        
+#         coin['currency'] = currency.text
+#         coin['rates'] = rates.text
+
+#         list_currencies.push( coin )
+#     }
+
+#     list_currencies
+# end
+
+# print trader ("https://coinmarketcap.com/all/views/all/")
